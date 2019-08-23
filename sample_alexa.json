@@ -1,0 +1,186 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "ENTER_YOUR_INVOCATION_NAME_HERE",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "no",
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "welcome",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "thank you",
+                        "done",
+                        "that is all",
+                        "end",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "GetBusTimes",
+                    "slots": [
+                        {
+                            "name": "Stop",
+                            "type": "LIST_OF_STOPS",
+                            "samples": [
+                                "when will the transit be at {Stop}",
+                                "when will the bus arrive at {Stop}",
+                                "I want the times for {Stop}",
+                                "{Stop}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "what do you think about {Stop}",
+                        "can you tell me when the transit will arrive at {Stop}",
+                        "can you tell me when the transit will be at {Stop}",
+                        "do you know when the transit will arrive at {Stop}",
+                        "do you know when the transit will be at {Stop}",
+                        "can you tell me when the next bus will arrive at {Stop}",
+                        "can you tell me when the next bus will be at {Stop}",
+                        "do you know when the next bus will arrive at {Stop}",
+                        "do you know when the next bus will be at {Stop}",
+                        "do you know about {Stop}",
+                        "what is the information on {Stop}",
+                        "give me information on {Stop}",
+                        "inform me of {Stop}",
+                        "inform me about {Stop}",
+                        "tell me {Stop}",
+                        "show me {Stop}",
+                        "{Stop} stop please",
+                        "{Stop} please",
+                        "{Stop} transit stop",
+                        "{Stop} bus stop",
+                        "{Stop} stop",
+                        "why is {Stop} late",
+                        "when should I go to {Stop}",
+                        "when should I get to {Stop}",
+                        "what do you know about {Stop}",
+                        "how does {Stop} look",
+                        "how is {Stop}",
+                        "what is the status of {Stop}",
+                        "transit times at {Stop}",
+                        "bus times at {Stop}",
+                        "transit times for {Stop}",
+                        "bus times for {Stop}",
+                        "transits at {Stop}",
+                        "buses at {Stop}",
+                        "transits for {Stop}",
+                        "buses for {Stop}",
+                        "why isn't there a transit at {Stop}",
+                        "why isn't there a bus at {Stop}",
+                        "what about {Stop}",
+                        "when will there be another transit at {Stop}",
+                        "when will there be another bus at {Stop}",
+                        "how many minutes until a bus shows up at {Stop}",
+                        "how many minutes until a transit arrives here at {Stop}",
+                        "do you see the transit at {Stop}",
+                        "do you see the bus at {Stop}",
+                        "what can you tell me about {Stop}",
+                        "do I have time before a transit arrives at {Stop}",
+                        "do I have time before a bus arrives at {Stop}",
+                        "how much longer do I have to wait for a transit at {Stop}",
+                        "how much longer do I have to wait for a bus at {Stop}",
+                        "how much longer do I have to wait for {Stop}",
+                        "when will the transit get to {Stop}",
+                        "where are the transits at {Stop}",
+                        "where is the transit at {Stop}",
+                        "where are the buses at {Stop}",
+                        "where is the bus at {Stop}",
+                        "what about the transits at {Stop}",
+                        "tell me about the transits at {Stop}",
+                        "what about the buses at {Stop}",
+                        "tell me about the buses at {Stop}",
+                        "give me the times for {Stop}",
+                        "give me info on {Stop}",
+                        "how is {Stop} looking",
+                        "when will the next bus arrive at the {Stop} stop",
+                        "when will the bus be at the {Stop} stop",
+                        "how does the {Stop} stop look right now",
+                        "tell me the times for {Stop}",
+                        "tell me the bus times for {Stop}",
+                        "tell me about {Stop}",
+                        "when will the bus be at {Stop}",
+                        "when does the first bus arrive at {Stop}",
+                        "{Stop}",
+                        "what is the bus time for {Stop}",
+                        "how many minutes until a bus arrives at {Stop}",
+                        "when can I expect the next bus at {Stop}",
+                        "when will the next bus arrive at {Stop}",
+                        "what time will the transit arrive at {Stop}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": [
+                        "go back",
+                        "go home",
+                        "navigate home",
+                        "back",
+                        "home"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_OF_STOPS",
+                    "values": [
+                        {
+                            "id": "123456789",
+                            "name": {
+                                "value": "EXAMPLE STOP 1",
+                                "synonyms": [
+                                    "EXAMPLE",
+                                    "CHANGE ME"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "GetBusTimes",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Stop",
+                            "type": "LIST_OF_STOPS",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.418161398393.495564023337"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "SKILL_RESPONSE"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.418161398393.495564023337",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which stop would you like to know about?"
+                    }
+                ]
+            }
+        ]
+    }
+}
