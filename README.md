@@ -2,7 +2,7 @@
 
 This repo contains all of the necessary starter code to get an Alexa skill created for your TransLoc agency.
 
-The lambda function can be hosted as a serverless function, or it can be Alexa-hosted. Inside of the lambda, you will have to change the code to include your API_KEY, AGENCY_CODE, AMAZON_SKILL_ID, TIMEZONE, and TRANSIT_NAME, which are all constants declared at the top of the code.
+The lambda function can be hosted as a serverless function, or it can be Alexa-hosted. If you choose to host it as a lambda function in AWS, you will also have to add "Alexa Skills Kit" as a trigger. Inside of the lambda, you will have to change the code to include your API_KEY, AGENCY_CODE, AMAZON_SKILL_ID, TIMEZONE, and TRANSIT_NAME, which are all constants declared at the top of the code.
     The API_KEY can be requested and obtained from the TransLoc API website (https://rapidapi.com/transloc/api/openapi-1-2).
     The AGENCY_CODE can also be obtained from the TransLoc API website (or Postman or cURL) by sending a GET request to the API for agencies near your geographical area (it is the top request on the website).
     The AMAZON_SKILL_ID will come from the "Endpoint" tab once you creat your Alexa Skill. You will not need this if you created an Alexa-hosted Skill, so you will need to take out the code that checks for the AMAZON_SKILL_ID in the lambda function, if that fits your case.
