@@ -12,3 +12,5 @@ The lambda function can be hosted as a serverless function, or it can be Alexa-h
 The helper functions will help get the stop names, so that you do not have to manually input them all. However, it would still be a good idea to go through and add synonyms for stop names that could be called other names. The helper functions will create a .csv file of all stop names for your agency. This can then be dropped into the "Bulk Edit" tab on the "LIST_OF_STOPS" slot type that is declared in the sample JSON. You can also create synonyms on the same page. You will need the API_KEY and AGENCY_CODE for these helper functions, as well, so see above for how to get those.
 
 The sample JSON file can be dropped into the JSON Editor of the Interaction Model in the Alexa Console of the skill you are creating. You will have to change the invocation name to the one you created, and you can delete the example stop. The example stop will be overwritten when you drop the .csv file of all stop names for your agency, as described above.
+
+An example of this code in action can be found at amazon.com/Connor-Sorrells-Tiger-Transit/dp/B07JV94V91
