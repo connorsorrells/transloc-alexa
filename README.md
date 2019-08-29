@@ -13,4 +13,4 @@ The helper functions will help get the stop names, so that you do not have to ma
 
 The sample JSON file can be dropped into the JSON Editor of the Interaction Model in the Alexa Console of the skill you are creating. You will have to change the invocation name to the one you created, and you can delete the example stop. The example stop will be overwritten when you drop the .csv file of all stop names for your agency, as described above.
 
-An example of this code in action can be found at amazon.com/Connor-Sorrells-Tiger-Transit/dp/B07JV94V91
+An example of this code in action can be found at [this Alexa Skill on the Amazon Marketplace] (http://amazon.com/Connor-Sorrells-Tiger-Transit/dp/B07JV94V91)
